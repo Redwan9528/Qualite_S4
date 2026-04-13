@@ -10,8 +10,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class VoitureTest {
 
     @Test
-    void creerVoiture(){
-        assertEquals(1,1);
+     void creerVoiture(){
+        Voiture v1 = new Voiture("audi",15000);
+        assertEquals(v1.getPrix(),15000);
     }
 
 }
