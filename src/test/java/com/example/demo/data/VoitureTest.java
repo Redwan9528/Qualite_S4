@@ -18,10 +18,10 @@ public class VoitureTest {
     void getsetVoiture(){
         Voiture v=new Voiture();
         v.setMarque("Fiat");
-        v.setId(0);
+        v.setId(1);
         v.setPrix(5000);
         assertEquals(v.getPrix(),5000);
-        assertEquals(v.getId(),0);
+        assertEquals(v.getId(),1);
         assertEquals(v.getMarque(),"Fiat");
 
     }
