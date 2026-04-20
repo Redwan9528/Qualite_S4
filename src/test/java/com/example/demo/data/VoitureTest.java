@@ -4,15 +4,34 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals.*;
 
 @SpringBootTest
 public class VoitureTest {
 
     @Test
-    void creerVoiture(){
-        Voiture v1 = new Voiture("audi",15000)
+     void creerVoiture(){
+        Voiture v1 = new Voiture("audi",15000);
         assertEquals(v1.getPrix(),15000);
     }
+    @Test 
+    void getsetVoiture(){
+        Voiture v=new Voiture();
+        v.setMarque("Fiat");
+        v.setId(0);
+        v.setPrix(5000);
+        assertEquals(v1.getPrix(),5000);
+        assertEquals(v1.getId(),0);
+        assertEquals(v1.getMarque(),"Fiat");
 
+    }
+
+
+    @Test
+    void toStringVoiture(){
+        Voiture v3=new Voiture("Tesla",50000);
+        v3.setId(95);
+        String attendu="Car{" +"marque='" + "Tesla" + '\'' +", prix=" + 50000 +", id=" + 95 +'}';
+        assertEquals(v.toString(),attendu);
+    }
 }
