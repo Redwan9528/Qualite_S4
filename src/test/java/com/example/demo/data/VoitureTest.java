@@ -34,4 +34,13 @@ public class VoitureTest {
         String attendu="Car{" +"marque='" + "Tesla" + '\'' +", prix=" + 50000 +", id=" + 95 +'}';
         assertEquals(v3.toString(),attendu);
     }
+
+
+    @Test
+    void toStringVoiture2(){
+        Voiture v4=new Voiture("okok",50000);
+        v4.setId(95);
+        String attendu="Car{" +"marque='" + "okok" + '\'' +", prix=" + 50000 +", id=" + 95 +'}';
+        assertEquals(v4.toString(),attendu);
+    }
 }
